@@ -4,6 +4,9 @@ _I have not written the GNUplot library. This is a copy from GNUplot which is us
 
 You can find the whole library [here](https://github.com/dstahlke/gnuplot-iostream/tree/master)
 
+
+This Code is the addition for a thesis I wrote during my university course Sales and Trading. The aim of the thesis was to compare both of those models on runtime complexity and how far the results for option pricing drift away to see if there is a chance to use a faster model for arbitraging options or to find out if they are beeing misspriced at the current time. The programm calculates the implied volatility and uses it for pricing a stock that can be entered and also taking the timevalue into consideration. The results are plotted with GNUplot and the sensitivity on reactions to volatility and time of those models are beeing compared. THe models I amm comparing in thi example are the Black-Scholes model and the Merton Jump Diffusion Model.
+
 ## Before running the program
 
 For plotting, this code uses GNUplot. Hence, make sure it installed.
