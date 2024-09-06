@@ -2,6 +2,8 @@
 **Disclaimer:**&nbsp; 
 _I have not written the GNUplot library. This is a copy from GNUplot which is used to display the resulting graphs_
 
+You can find the whole library [here](https://github.com/dstahlke/gnuplot-iostream/tree/master)
+
 ## Before running the program
 
 For plotting, this code uses GNUplot. Hence, make sure it installed.
