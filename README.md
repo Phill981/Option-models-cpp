@@ -18,11 +18,12 @@ Also, for compability reasons, the program runs on a C++ 17 compiler so also ple
 
 The GNUplot library uses Boost which we need to add to the program parameters when running it. Thus, you have to figure out where you have saved boost and add the path to the command below to compile the program.
 
-## Results
-
-
 > g++ -std=c++17 black_scholes_heston.cpp -o black_scholes_heston -I/opt/homebrew/opt/boost/include -L/opt/homebrew/opt/boost/lib -lboost_iostreams -lboost_system -lboost_filesystem
 
 After you run this, you can continue as usually with any other C++ program and just run it using
 
 > ./black_scholes_heston
+
+
+## Results
+
