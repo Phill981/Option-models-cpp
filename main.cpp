@@ -194,9 +194,9 @@ void plot_sensitivity_and_performance(double S, double K, double T, double r, do
     gp << "EOD\n";
 
     // Add average line for Black-Scholes runtime
-    std::cout << "Avg Merton Runtime: " << avg_bs_runtime << " sec" << std::endl;
+   std::cout << "Avg Merton Runtime: " << avg_bs_runtime << " sec" << std::endl;
     gp << "set arrow from 0, " << avg_bs_runtime << " to " << bs_runtimes.size() - 1 << ", " << avg_bs_runtime
-       << " nohead lc rgb 'black' lw 2\n";
+ //      << " nohead lc rgb 'black' lw 2\n";
     
     gp << "set title 'Black-Scholes Runtime (100 runs)'\n";
     gp << "plot $data_bs_runtime with points title ''\n";
