@@ -59,6 +59,18 @@ std::vector<double> measure_runtime_blackScholes_100(double (*func)(double, doub
     return run_times;
 }
 
+double calculate_implied_volatility(std::vector<double> historic_data){
+    double average = 0
+    for(int i=0;i<historic_data.size;i++){
+        average = average + historic_data[i];
+    }
+    average = average/historic_data.size;
+    double std = 0;
+    for(int i = 0; i<=historic_data.size;i++){
+        std = (historic_data[i] - average);    
+    }
+}
+
 
 std::vector<double> measure_runtime_merton_100(double (*func)(double, double, double, double, double, double, double, double), 
                                                 double S, double K, double T, double r, double sigma, double lambda, 
@@ -171,7 +183,7 @@ void plot_sensitivity_and_performance(double S, double K, double T, double r, do
 
     gp << "set title 'Call Price vs Strike Price (Combined)'\n";
     gp << "plot $data_strike_bs with lines title 'Black-Scholes', $data_strike_merton with lines title 'Merton'\n";
-
+s
     // Plot Price Discrepancy
     gp << "set xlabel 'Volatility'\n";
     gp << "set ylabel 'Price Discrepancy'\n";
@@ -211,7 +223,7 @@ void plot_sensitivity_and_performance(double S, double K, double T, double r, do
     gp << "EOD\n";
 
     // Add average line for Merton runtime
-    std::cout << "Avg Merton Runtime: " << avg_merton_runtime << " sec" << std::endl;
+   : std::cout << "Avg Merton Runtime: " << avg_merton_runtime << " sec" << std::endl;
     gp << "set arrow from 0, " << avg_merton_runtime << " to " << merton_runtimes.size() - 1 << ", " << avg_merton_runtime
        << " nohead lc rgb 'black' lw 2\n";
     
