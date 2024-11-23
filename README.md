@@ -25,7 +25,3 @@ Replace "/opt/homebrew/opt/boost/" when running the code with your path to boost
 After you run this, you can continue as usually with any other C++ program and just run it using
 
 > ./main
-
-
-## Results
-
